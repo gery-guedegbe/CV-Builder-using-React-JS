@@ -1,0 +1,48 @@
+label{
+    font-size: var( --small-font-size);
+    padding: 0 0.8rem;
+}
+
+.new{
+    padding: 0.8rem;
+    font-size: 0.8rem;
+    background-color: var(--low-blue) ;
+    color: var(--white);
+    font-weight: var(--font-semibold);
+    border-radius: 0.6rem;
+    color: var(--white);
+}
+
+.new:hover{
+    background-color: var(--blue);
+}
+
+.experience-form .title{
+    padding: 1rem 0;
+}
+
+.experience-form h2{
+    width: 100%;
+    text-align: left;
+}
+
+.button-group{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+}
+
+.experience-form .remove{
+    padding: 0.8rem;
+    border-radius: 0.6rem;
+    background-color: var(--low-blue) ;
+    color: var(--white);
+    font-size: 0.8rem;
+    font-weight: var(--font-semibold);
+}
+
+.experience-form .remove:hover{
+    background-color: var(--blue);
+}

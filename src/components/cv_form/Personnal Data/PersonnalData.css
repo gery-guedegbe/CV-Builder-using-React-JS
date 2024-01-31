@@ -1,0 +1,84 @@
+.menu{
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 20px;
+}
+
+.menu_button{
+    background-color: var(--white);
+}
+
+.menu_button .title{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.title div{
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.icons{
+    position: relative;
+    display: inline-block;
+}
+
+.down-icon,
+.up-icon {
+    position: absolute;
+}
+
+.down-icon{
+    display: none;
+}
+
+.fa-solid{
+    font-size: 1.3rem;
+}
+
+.title{
+    font-size: var(--h2-font-size);
+    font-weight: var( --font-bold);
+}
+
+.menu_container{
+    margin-top: 1rem;
+}
+
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input{
+    padding: 0.8rem;
+    border: none;
+    outline: none;
+    background-color: var(--extra-grey);
+    border-radius: 0.8rem;
+    color: var( --h1-color);
+}
+
+input::placeholder{
+    font-weight: var( --normal-font-size);
+}
+
+.description{
+    padding: 2rem;
+    height: 6rem;
+}
+
+form div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.4rem;
+}
+
+form div input{
+    width: 100%;    
+}

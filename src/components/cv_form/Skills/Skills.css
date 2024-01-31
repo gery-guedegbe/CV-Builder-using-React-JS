@@ -1,0 +1,24 @@
+.title{
+    padding: 1rem 0;
+}
+
+.button-group{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+}
+
+.remove{
+    padding: 0.8rem;
+    border-radius: 0.6rem;
+    background-color: var(--low-blue) ;
+    color: var(--white);
+    font-size: 0.8rem;
+    font-weight: var(--font-semibold);
+}
+
+.remove:hover{
+    background-color: var(--blue);
+}
