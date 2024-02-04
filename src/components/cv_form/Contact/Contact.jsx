@@ -1,9 +1,11 @@
 import React from "react";
 import "./Contact.css";
 import { useState } from "react";
-import CV from "../../cv_preview/CV";
+import { useData } from "../DataContext";
 
 const Contact = () => {
+  const { dispatch } = useData();
+
   const [formData, setFormData] = useState({
     address: "",
     email: "",
@@ -19,25 +21,29 @@ const Contact = () => {
     }));
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch({ type: "SET_USER_DATA", payload: formData });
+  };
+
   return (
     <div className="menu">
-      <button className="menu_button" id="menu_button">
-        <div className="title">
-          <div>
-            <i class="fa-solid fa-address-book"></i>
-            <h2>Contacts</h2>
-          </div>
-          <div className="icons" id="icons"></div>
+      <div className="title">
+        <div>
+          <i className="fa-solid fa-address-book"></i>
+          <h2>Contacts</h2>
         </div>
-      </button>
-      <form action="">
+        <div className="icons" id="icons"></div>
+      </div>
+
+      <form>
         <input
           type="text"
           name="address"
           className="address"
           id="address"
-          value={formData.address}
           placeholder="Address"
+          value={formData.address}
           onChange={handleInputChange}
         />
         <div>
@@ -46,8 +52,8 @@ const Contact = () => {
             name="email"
             id="email"
             className="email"
-            value={formData.email}
             placeholder="E-mail"
+            value={formData.email}
             onChange={handleInputChange}
           />
           <input
@@ -55,8 +61,8 @@ const Contact = () => {
             name="phone"
             id="phone"
             className="phone"
-            value={formData.phone}
             placeholder="Phone Number"
+            value={formData.phone}
             onChange={handleInputChange}
           />
         </div>
@@ -65,10 +71,13 @@ const Contact = () => {
           name="link"
           className="link"
           id="link"
+          placeholder="Portfolio Link"
           value={formData.link}
-          placeholder="Portofolio Link"
           onChange={handleInputChange}
         />
+        <button type="submit" onClick={handleSubmit}>
+          Save
+        </button>
       </form>
     </div>
   );

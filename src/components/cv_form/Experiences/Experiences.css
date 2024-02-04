@@ -1,6 +1,6 @@
 label{
     font-size: var( --small-font-size);
-    padding: 0 0.8rem;
+    padding: 0 0.6rem;
 }
 
 .new{
@@ -27,6 +27,7 @@ label{
 }
 
 .button-group{
+    margin-top: 1rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -34,15 +35,12 @@ label{
     align-self: center;
 }
 
-.experience-form .remove{
-    padding: 0.8rem;
-    border-radius: 0.6rem;
-    background-color: var(--low-blue) ;
-    color: var(--white);
-    font-size: 0.8rem;
-    font-weight: var(--font-semibold);
+.details{
+    height: 10vh;
 }
 
-.experience-form .remove:hover{
-    background-color: var(--blue);
+.Exp_form{
+   width: 100%;
+   display: grid;   
+   grid-template-columns: 1fr;
 }

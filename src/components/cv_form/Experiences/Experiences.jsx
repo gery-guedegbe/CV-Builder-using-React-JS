@@ -1,117 +1,135 @@
 import React, { useState } from "react";
 import "./Experiences.css";
+import { useData } from "../DataContext";
 
 const Experiences = () => {
+  const { dispatch } = useData();
+
   const [experiences, setExperiences] = useState([
     {
-      id: 1,
-      position: "",
+      positionExp: "",
       company: "",
       startDate: "",
       endDate: "",
-      description: "",
+      details: "",
     },
   ]);
 
-  const handleNewExperience = () => {
-    setExperiences((prevExperiences) => [
-      ...prevExperiences,
+  const handleInputChange = (index, e) => {
+    const { name, value } = e.target;
+
+    const newExperiences = [...experiences];
+    newExperiences[index] = {
+      ...newExperiences[index],
+      [name]: value,
+    };
+
+    setExperiences(newExperiences);
+  };
+
+  const handleAddExperience = () => {
+    setExperiences([
+      ...experiences,
       {
-        id: prevExperiences.length + 1,
-        position: "",
+        positionExp: "",
         company: "",
         startDate: "",
         endDate: "",
-        description: "",
+        details: "",
       },
     ]);
   };
 
-  const handleRemoveExperience = (id) => {
-    setExperiences((prevExperiences) =>
-      prevExperiences.filter((experience) => experience.id !== id)
-    );
+  const handleRemoveExperience = (index) => {
+    const newExperiences = [...experiences];
+    newExperiences.splice(index, 1);
+    setExperiences(newExperiences);
   };
 
-  const renderExperiences = () => {
-    return experiences.map((experience, index) => (
-      <div key={experience.id} className="experience-form">
-        {index !== 0 && (
-          <div className="title">
-            <div>
-              <i className="fa-solid fa-wrench"></i>
-              <h2> Experience #{index}</h2>
-            </div>
-          </div>
-        )}
-        <form action="">
-          <input
-            type="text"
-            name={`position${experience.id}`}
-            className="position"
-            placeholder="Position"
-          />
-          <input type="text" className="company" placeholder="Company" />
-          <label htmlFor={`startDate${experience.id}`}>Date Start</label>
-          <input
-            type="date"
-            name={`startDate${experience.id}`}
-            className="startDate"
-            placeholder="Start Date of employment"
-          />
-          <label htmlFor={`endDate${experience.id}`}>Date End</label>
-          <input
-            type="date"
-            name={`endDate${experience.id}`}
-            className="endDate"
-            placeholder="End Date of employment"
-          />
-          <input
-            type="text"
-            className="description"
-            placeholder="Your main occupation"
-          />
-          {(index !== 0 || experiences.length === 1) && (
-            <div className="button-group">
-              {index !== 0 && (
-                <button
-                  type="button"
-                  className="remove"
-                  onClick={() => handleRemoveExperience(experience.id)}
-                >
-                  Remove
-                </button>
-              )}
-              {index === experiences.length - 1 && (
-                <button
-                  type="button"
-                  className="new"
-                  onClick={handleNewExperience}
-                >
-                  +New
-                </button>
-              )}
-            </div>
-          )}
-        </form>
-      </div>
-    ));
+  const handleSubmit = () => {
+    dispatch({ type: "SET_EXPERIENCE_DATA", payload: experiences });
   };
 
   return (
     <div className="menu" id="menu">
-      <button className="menu_button" id="menu_button">
-        <div className="title">
-          <div>
-            <i className="fa-solid fa-wrench"></i>
-            <h2> Experience</h2>
-          </div>
-          <div className="icons" id="icons"></div>
+      <div className="title">
+        <div>
+          <i className="fa-solid fa-wrench"></i>
+          <h2> Experience</h2>
         </div>
-      </button>
-      <div className="menu_container" id="menu_container">
-        {renderExperiences()}
+        <div className="icons" id="icons"></div>
       </div>
+
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          handleSubmit();
+        }}
+      >
+        {experiences.map((experience, index) => (
+          <div key={index} className="experience-form Exp_form">
+            <input
+              type="text"
+              name="positionExp"
+              className="positionExp"
+              placeholder="Position"
+              value={experience.positionExp}
+              onChange={(e) => handleInputChange(index, e)}
+            />
+            <input
+              type="text"
+              name="company"
+              className="company"
+              placeholder="Company"
+              value={experience.company}
+              onChange={(e) => handleInputChange(index, e)}
+            />
+            <label>Start Date</label>
+            <input
+              type="date"
+              name="startDate"
+              className="startDate"
+              placeholder="Start Date"
+              value={experience.startDate}
+              onChange={(e) => handleInputChange(index, e)}
+            />
+            <label>End Date</label>
+            <input
+              type="date"
+              name="endDate"
+              className="endDate"
+              placeholder="End Date"
+              value={experience.endDate}
+              onChange={(e) => handleInputChange(index, e)}
+            />
+            <input
+              type="text"
+              name="details"
+              className="details"
+              placeholder="Your main occupation"
+              value={experience.details}
+              onChange={(e) => handleInputChange(index, e)}
+            />
+
+            <div className="button-group">
+              {experiences.length > 1 && (
+                <button
+                  type="button"
+                  onClick={() => handleRemoveExperience(index)}
+                >
+                  Remove
+                </button>
+              )}
+            </div>
+          </div>
+        ))}
+        <button type="button" onClick={handleAddExperience}>
+          +New
+        </button>
+        <button type="submit" onClick={handleSubmit}>
+          Save
+        </button>
+      </form>
     </div>
   );
 };

@@ -44,6 +44,7 @@ body{
   color: var(--principal-color);
   margin: 0 auto;
   padding: 40px 40px;
+  overflow: auto;
 }
 
 html{
@@ -62,6 +63,16 @@ button{
   cursor: pointer;
   border: none;
   outline: none;
+  padding: 0.8rem;
+  border-radius: 0.6rem;
+  font-size: 0.8rem;
+  font-weight: var(--font-semibold);
+  background-color: var(--low-blue) ;
+  color: var(--white);
+}
+
+button:hover{
+  background-color: var(--blue);
 }
 
 img{

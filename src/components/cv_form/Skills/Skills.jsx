@@ -1,82 +1,109 @@
 import React, { useState } from "react";
 import "./Skills.css";
+import { useData } from "../DataContext";
 
 const Skills = () => {
-  const [skills, setSkills] = useState([
+  const { dispatch } = useData();
+
+  const [mainFormData, setMainFormData] = useState({
+    skills: "",
+  });
+
+  const [additionalSkills, setAdditionalSkills] = useState([
     {
       id: 1,
-      value: "",
+      skills: "",
     },
   ]);
 
-  const handleNewSkills = () => {
-    setSkills((prevSkills) => [
-      ...prevSkills,
-      {
-        id: prevSkills.length + 1,
-        value: "",
+  const handleMainInputChange = (e) => {
+    const { name, value } = e.target;
+    setMainFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleAdditionalInputChange = (e, index) => {
+    const { name, value } = e.target;
+    const newAdditionalSkills = [...additionalSkills];
+    newAdditionalSkills[index] = {
+      ...newAdditionalSkills[index],
+      [name]: value,
+    };
+    setAdditionalSkills(newAdditionalSkills);
+  };
+
+  const handleAddSkill = () => {
+    const newSkill = {
+      id: additionalSkills.length + 1,
+      skills: "",
+    };
+    setAdditionalSkills([...additionalSkills, newSkill]);
+  };
+
+  const handleRemoveSkill = (index) => {
+    const newAdditionalSkills = additionalSkills.filter((_, i) => i !== index);
+    setAdditionalSkills(newAdditionalSkills);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch({
+      type: "SET_SKILL_DATA",
+      payload: {
+        skills: [mainFormData, ...additionalSkills],
       },
-    ]);
-  };
-
-  const handleRemoveSkills = (id) => {
-    setSkills((prevSkills) => prevSkills.filter((skill) => skill.id !== id));
-  };
-
-  const renderSkills = () => {
-    return skills.map((skill, index) => (
-      <div key={skill.id} className="skills-color">
-        {index !== 0 && (
-          <div className="title">
-            <div>
-              <i className="fa-solid fa-gears"></i>
-              <h2> Skills #{index}</h2>
-            </div>
-          </div>
-        )}
-        <form key={index}>
-          <input
-            type="text"
-            name={`skills${skill.id}`}
-            className="skills"
-            placeholder="Language or Technology"
-          />
-          {(index !== 0 || skills.length === 1) && (
-            <div className="button-group">
-              {index !== 0 && (
-                <button
-                  type="button"
-                  className="remove"
-                  onClick={() => handleRemoveSkills(skill.id)}
-                >
-                  Remove
-                </button>
-              )}
-              {index === skills.length - 1 && (
-                <button type="button" className="new" onClick={handleNewSkills}>
-                  +New
-                </button>
-              )}
-            </div>
-          )}
-        </form>
-      </div>
-    ));
+    });
   };
 
   return (
     <div className="menu" id="menu">
-      <button className="menu_button" id="menu_button">
-        <div className="title">
-          <div>
-            <i className="fa-solid fa-gears"></i>
-            <h2>Skills</h2>
-          </div>
+      <div className="title">
+        <div>
+          <i className="fa-solid fa-gears"></i>
+          <h2>Skills</h2>
         </div>
-      </button>
-      <div className="menu_container" id="menu_container">
-        {renderSkills()}
       </div>
+
+      <form className="skills_form" onSubmit={handleSubmit}>
+        <div className="skill-item">
+          <input
+            type="text"
+            name="skills"
+            className="skills"
+            placeholder="Language or Technology"
+            value={mainFormData.skills}
+            onChange={handleMainInputChange}
+          />
+        </div>
+
+        {additionalSkills.map((skill, index) => (
+          <div key={skill.id} className="skill-items">
+            <input
+              type="text"
+              name="skills"
+              className="skills"
+              placeholder="Language or Technology"
+              value={skill.skills}
+              onChange={(e) => handleAdditionalInputChange(e, index)}
+            />
+
+            <div>
+              <button type="button" onClick={() => handleRemoveSkill(index)}>
+                Remove
+              </button>
+            </div>
+          </div>
+        ))}
+
+        <div className="button-group">
+          <button type="button" onClick={handleAddSkill}>
+            +New
+          </button>
+          <button type="submit">Save</button>
+        </div>
+      </form>
     </div>
   );
 };

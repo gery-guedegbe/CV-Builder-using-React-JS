@@ -45,6 +45,9 @@
 
 .menu_container{
     margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 form{
@@ -81,4 +84,14 @@ form div{
 
 form div input{
     width: 100%;    
+}
+
+.save_user{
+    padding: 0.8rem;
+    font-size: 0.8rem;
+    background-color: var(--low-blue) ;
+    color: var(--white);
+    font-weight: var(--font-semibold);
+    border-radius: 0.6rem;
+    color: var(--white);
 }
