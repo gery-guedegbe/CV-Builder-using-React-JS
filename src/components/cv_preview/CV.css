@@ -5,10 +5,8 @@
     width: 100%;
     overflow: hidden;
     outline: none;   
-    position: -webkit-sticky;
-    position: sticky;
     max-height: 1200px;
-    height: fit-content;
+
 }
 
 .cv_main{
@@ -124,4 +122,62 @@ p{
 .right_cv_main ul li {
     font-size: 0.8rem;
     font-weight: 500;
+}
+
+@media only screen and (max-width: 1350px) {
+   .cv_container{
+    width: 100%;
+   }
+
+   .header{
+    height: 100%;
+   }
+
+   .picture_div{
+    width: 100px;
+   }
+
+   .picture {
+    max-width: 100%;
+    height: 100%;
+  }
+
+  .right{
+    padding: 0.6rem;
+  }
+
+  .user_name{
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .post{
+    font-size: 0.7rem;
+    font-weight: 200;
+  }
+
+  .contact_infos{
+    gap: 1rem;
+    font-size: 0.3rem;
+  }
+
+  h3{
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    margin: 0;
+    padding: 0.6rem 0 ;
+  }
+
+  h4{
+    font-weight: 500;
+    font-size: 0.8rem;
+  }
+  
+  p{
+    font-size: 0.6rem;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+    
 }

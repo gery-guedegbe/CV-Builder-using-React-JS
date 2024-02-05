@@ -4,3 +4,24 @@
     grid-template-columns: 0.8fr 1fr;
     gap: 2rem;
 }
+
+@media screen and (max-width: 1350px){
+    .container{
+      min-height: 100vh;
+      grid-template-rows: 1fr 1fr;   
+      grid-template-columns: 1fr;
+      margin: 0 auto;
+      place-content: center;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .container{
+        width: 80%;
+        margin: 0 auto;
+        place-content: center;
+        overflow: hidden;
+        outline: none;
+    }
+    
+}
