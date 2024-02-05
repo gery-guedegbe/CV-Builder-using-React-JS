@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/CV-Builder-using-React-JS.git/static/css/main.b0f5d48b.css",
-    "main.js": "/CV-Builder-using-React-JS.git/static/js/main.96977909.js",
-    "static/js/703.964f0727.chunk.js": "/CV-Builder-using-React-JS.git/static/js/703.964f0727.chunk.js",
-    "static/js/379.368338df.chunk.js": "/CV-Builder-using-React-JS.git/static/js/379.368338df.chunk.js",
-    "static/js/787.6523e2f7.chunk.js": "/CV-Builder-using-React-JS.git/static/js/787.6523e2f7.chunk.js",
-    "static/media/profile.jpg": "/CV-Builder-using-React-JS.git/static/media/profile.3e26c65a6096e7beb838.jpg",
-    "static/media/fa-solid-900.ttf": "/CV-Builder-using-React-JS.git/static/media/fa-solid-900.45a265d0f07b31cde85f.ttf",
-    "static/media/fa-brands-400.ttf": "/CV-Builder-using-React-JS.git/static/media/fa-brands-400.6205fd00fb1b573e9f0f.ttf",
-    "static/media/fa-solid-900.woff2": "/CV-Builder-using-React-JS.git/static/media/fa-solid-900.fb8184add5a3101ad0a3.woff2",
-    "static/media/fa-brands-400.woff2": "/CV-Builder-using-React-JS.git/static/media/fa-brands-400.8d3cabfc66809162fb4d.woff2",
-    "static/media/fa-regular-400.ttf": "/CV-Builder-using-React-JS.git/static/media/fa-regular-400.adc51aab4d771ab65f81.ttf",
-    "static/media/defaultUser.png": "/CV-Builder-using-React-JS.git/static/media/defaultUser.4cca7c2bbcf50d2795b5.png",
-    "static/media/fa-regular-400.woff2": "/CV-Builder-using-React-JS.git/static/media/fa-regular-400.e931bc0d14f5bbb1da22.woff2",
-    "static/media/fa-v4compatibility.ttf": "/CV-Builder-using-React-JS.git/static/media/fa-v4compatibility.2eb7b3ef25042305f3ff.ttf",
-    "static/media/fa-v4compatibility.woff2": "/CV-Builder-using-React-JS.git/static/media/fa-v4compatibility.b3049b13a93f07e026fc.woff2",
-    "index.html": "/CV-Builder-using-React-JS.git/index.html",
-    "main.b0f5d48b.css.map": "/CV-Builder-using-React-JS.git/static/css/main.b0f5d48b.css.map",
-    "main.96977909.js.map": "/CV-Builder-using-React-JS.git/static/js/main.96977909.js.map",
-    "703.964f0727.chunk.js.map": "/CV-Builder-using-React-JS.git/static/js/703.964f0727.chunk.js.map",
-    "379.368338df.chunk.js.map": "/CV-Builder-using-React-JS.git/static/js/379.368338df.chunk.js.map",
-    "787.6523e2f7.chunk.js.map": "/CV-Builder-using-React-JS.git/static/js/787.6523e2f7.chunk.js.map"
+    "main.css": "/CV-Builder-using-React-JS/static/css/main.f73b20fc.css",
+    "main.js": "/CV-Builder-using-React-JS/static/js/main.24d09bf2.js",
+    "static/js/703.964f0727.chunk.js": "/CV-Builder-using-React-JS/static/js/703.964f0727.chunk.js",
+    "static/js/379.368338df.chunk.js": "/CV-Builder-using-React-JS/static/js/379.368338df.chunk.js",
+    "static/js/787.6523e2f7.chunk.js": "/CV-Builder-using-React-JS/static/js/787.6523e2f7.chunk.js",
+    "static/media/profile.jpg": "/CV-Builder-using-React-JS/static/media/profile.3e26c65a6096e7beb838.jpg",
+    "static/media/fa-solid-900.ttf": "/CV-Builder-using-React-JS/static/media/fa-solid-900.45a265d0f07b31cde85f.ttf",
+    "static/media/fa-brands-400.ttf": "/CV-Builder-using-React-JS/static/media/fa-brands-400.6205fd00fb1b573e9f0f.ttf",
+    "static/media/fa-solid-900.woff2": "/CV-Builder-using-React-JS/static/media/fa-solid-900.fb8184add5a3101ad0a3.woff2",
+    "static/media/fa-brands-400.woff2": "/CV-Builder-using-React-JS/static/media/fa-brands-400.8d3cabfc66809162fb4d.woff2",
+    "static/media/fa-regular-400.ttf": "/CV-Builder-using-React-JS/static/media/fa-regular-400.adc51aab4d771ab65f81.ttf",
+    "static/media/defaultUser.png": "/CV-Builder-using-React-JS/static/media/defaultUser.4cca7c2bbcf50d2795b5.png",
+    "static/media/fa-regular-400.woff2": "/CV-Builder-using-React-JS/static/media/fa-regular-400.e931bc0d14f5bbb1da22.woff2",
+    "static/media/fa-v4compatibility.ttf": "/CV-Builder-using-React-JS/static/media/fa-v4compatibility.2eb7b3ef25042305f3ff.ttf",
+    "static/media/fa-v4compatibility.woff2": "/CV-Builder-using-React-JS/static/media/fa-v4compatibility.b3049b13a93f07e026fc.woff2",
+    "index.html": "/CV-Builder-using-React-JS/index.html",
+    "main.f73b20fc.css.map": "/CV-Builder-using-React-JS/static/css/main.f73b20fc.css.map",
+    "main.24d09bf2.js.map": "/CV-Builder-using-React-JS/static/js/main.24d09bf2.js.map",
+    "703.964f0727.chunk.js.map": "/CV-Builder-using-React-JS/static/js/703.964f0727.chunk.js.map",
+    "379.368338df.chunk.js.map": "/CV-Builder-using-React-JS/static/js/379.368338df.chunk.js.map",
+    "787.6523e2f7.chunk.js.map": "/CV-Builder-using-React-JS/static/js/787.6523e2f7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b0f5d48b.css",
-    "static/js/main.96977909.js"
+    "static/css/main.f73b20fc.css",
+    "static/js/main.24d09bf2.js"
   ]
 }
