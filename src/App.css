@@ -7,6 +7,7 @@
 
 @media screen and (max-width: 1350px){
     .container{
+      width: 100%;
       min-height: 100vh;
       grid-template-rows: 1fr 1fr;   
       grid-template-columns: 1fr;
@@ -15,13 +16,30 @@
     }
 }
 
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 800px) {
     .container{
-        width: 80%;
+        width: 100%;
         margin: 0 auto;
         place-content: center;
-        overflow: hidden;
-        outline: none;
     }
     
+}
+
+@media only screen and (max-width: 375px) {
+    .container{
+        width: 100%;
+        margin: 0 auto;
+        padding: 0;
+        place-content: center;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    body{
+        width: 100%;
+        margin: 0 auto;
+        padding: 1rem;
+        display: grid;
+        place-content: center;
+    }
 }

@@ -43,7 +43,7 @@ body{
   line-height: 1.7;
   color: var(--principal-color);
   margin: 0 auto;
-  padding: 40px 40px;
+  padding: 10px 40px;
   overflow: auto;
 }
 

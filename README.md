@@ -17,4 +17,4 @@ JavaScript (ES6+)
 HTML2PDF.js
 GitHub
 
-[Direct Link](https://)
+[Direct Link](https://https://gery-guedegbe.github.io/CV-Builder-using-React-JS/)
