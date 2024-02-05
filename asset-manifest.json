@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/CV-Builder-using-React-JS/static/css/main.ebd4113d.css",
+    "main.css": "/CV-Builder-using-React-JS/static/css/main.7b7eec3d.css",
     "main.js": "/CV-Builder-using-React-JS/static/js/main.24d09bf2.js",
     "static/js/703.964f0727.chunk.js": "/CV-Builder-using-React-JS/static/js/703.964f0727.chunk.js",
     "static/js/379.368338df.chunk.js": "/CV-Builder-using-React-JS/static/js/379.368338df.chunk.js",
@@ -16,14 +16,14 @@
     "static/media/fa-v4compatibility.ttf": "/CV-Builder-using-React-JS/static/media/fa-v4compatibility.2eb7b3ef25042305f3ff.ttf",
     "static/media/fa-v4compatibility.woff2": "/CV-Builder-using-React-JS/static/media/fa-v4compatibility.b3049b13a93f07e026fc.woff2",
     "index.html": "/CV-Builder-using-React-JS/index.html",
-    "main.ebd4113d.css.map": "/CV-Builder-using-React-JS/static/css/main.ebd4113d.css.map",
+    "main.7b7eec3d.css.map": "/CV-Builder-using-React-JS/static/css/main.7b7eec3d.css.map",
     "main.24d09bf2.js.map": "/CV-Builder-using-React-JS/static/js/main.24d09bf2.js.map",
     "703.964f0727.chunk.js.map": "/CV-Builder-using-React-JS/static/js/703.964f0727.chunk.js.map",
     "379.368338df.chunk.js.map": "/CV-Builder-using-React-JS/static/js/379.368338df.chunk.js.map",
     "787.6523e2f7.chunk.js.map": "/CV-Builder-using-React-JS/static/js/787.6523e2f7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ebd4113d.css",
+    "static/css/main.7b7eec3d.css",
     "static/js/main.24d09bf2.js"
   ]
 }
